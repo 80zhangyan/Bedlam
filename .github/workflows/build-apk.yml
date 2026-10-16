@@ -1,0 +1,47 @@
+# On-demand APK build.
+# Trigger from: GitHub repo -> Actions -> "Build APK" -> Run workflow.
+# The signed/unsigned per-ABI APKs are uploaded as a downloadable artifact.
+name: Build APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to build"
+        required: false
+        default: "master"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.inputs.branch || 'master' }}
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Check Hysteria core pin
+        run: bash .github/scripts/check-core-pin.sh
+
+      - uses: ./.github/actions/setup-build
+
+      - name: Build the Go library from source
+        run: ./gradlew :hysteria:buildGolib --stacktrace
+
+      - name: Build unsigned release APKs
+        run: ./gradlew :app:assembleRelease --stacktrace
+
+      - name: List APKs
+        run: ls -lh build/release/
+
+      - name: Upload APKs
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: bedlam-apk
+          path: build/release/*.apk
+          retention-days: 30

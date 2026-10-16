@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Bedlam</string>
+
+    <string name="notification_channel_name">VPN 状态</string>
+    <string name="notification_channel_description">Bedlam VPN 隧道状态</string>
+    <string name="notification_alerts_channel_name">连接警报</string>
+    <string name="notification_alerts_channel_description">VPN 停止或无法重连时</string>
+
+    <string name="notification_title">Bedlam</string>
+    <string name="notification_title_named">Bedlam · %1$s</string>
+
+    <string name="notification_state_connecting">连接中…</string>
+    <string name="notification_state_reconnecting">重连中（第 %1$d 次）…</string>
+    <string name="notification_state_disconnected">已断开</string>
+    <string name="notification_reconnect_timeout">仍在尝试重连 — 网络恢复后将恢复保护</string>
+    <string name="notification_stopped_title">Bedlam VPN 已停止</string>
+    <string name="notification_revoked">Android 已关闭 Bedlam 的 VPN。另一个 VPN 应用已启动，或 VPN 已在系统设置中关闭。</string>
+    <string name="notification_state_error">错误：%1$s</string>
+    <string name="notification_traffic_rate">↑ %1$s · ↓ %2$s</string>
+    <string name="notification_detail_session">会话：↑ %1$s · ↓ %2$s</string>
+    <string name="notification_detail_server">服务器：%1$s</string>
+    <string name="notification_detail_server_udp">服务器：%1$s · UDP 中继</string>
+    <string name="crash_channel_name">崩溃报告</string>
+    <string name="crash_notification_title">Bedlam 已崩溃</string>
+    <string name="crash_notification_text">点击分享崩溃报告</string>
+    <string name="crash_notification_share">分享崩溃报告</string>
+    <string name="native_load_error_title">Bedlam 无法在此设备上启动</string>
+    <string name="native_load_error_body">已安装的版本没有此手机可加载的原生库。请从 GitHub Releases 安装 %1$s 版本。</string>
+    <string name="native_load_error_abis">设备 ABI：%1$s</string>
+    <string name="native_load_error_open_releases">打开 Releases</string>
+    <string name="rate_per_second">%1$s/s</string>
+
+    <string name="action_disconnect">断开</string>
+    <string name="action_reconnect">重连</string>
+    <string name="action_connect">连接</string>
+
+    <string name="qs_tile_label">Bedlam</string>
+    <string name="qs_tile_connected">已连接</string>
+    <string name="qs_tile_connecting">连接中</string>
+    <string name="qs_tile_reconnecting">重连中</string>
+    <string name="qs_tile_disconnected">已断开</string>
+    <string name="qs_tile_error">失败</string>
+    <string name="qs_tile_no_profile">无配置文件</string>
+
+    <string name="vpn_session_default">Bedlam</string>
+
+    <string name="nav_tab_home">首页</string>
+    <string name="nav_tab_settings">设置</string>
+    <string name="nav_tab_logs">日志</string>
+
+    <string name="dashboard_action_import_cd">导入配置文件</string>
+    <string name="dashboard_connection_time">连接时长</string>
+    <string name="dashboard_confirm_switch_title">确认切换配置文件？</string>
+    <string name="dashboard_confirm_switch_cd">切换到 %1$s</string>
+    <string name="dashboard_cancel_switch_cd">取消切换配置文件</string>
+    <string name="dashboard_empty_hint">导入 hysteria2:// 链接或配置文件 JSON 以开始使用</string>
+    <string name="dashboard_profiles_section">配置文件</string>
+
+    <string name="dashboard_state_disconnected">已断开</string>
+    <string name="dashboard_state_connecting">连接中…</string>
+    <string name="dashboard_state_connected">已连接</string>
+    <string name="dashboard_state_reconnecting">重连中（#%1$d）</string>
+    <string name="dashboard_state_error">失败</string>
+    <string name="dashboard_connection_error">错误：%1$s</string>
+
+    <string name="dashboard_error_no_profile">请先选择一个配置文件</string>
+    <string name="dashboard_error_duplicate_profile">已保存为\"%1$s\"</string>
+    <string name="dashboard_error_import_failed">导入失败：%1$s</string>
+    <string name="local_network_permission_denied">Bedlam 需要本地网络访问权限，以使用您的网络 DNS 并访问本地 VPN 服务器。</string>
+
+    <string name="import_title">导入配置文件</string>
+    <string name="import_format_link">链接</string>
+    <string name="import_format_json">JSON</string>
+    <string name="import_field_link">hysteria2:// 链接</string>
+    <string name="import_field_json">配置文件 JSON</string>
+    <string name="import_placeholder_link">hysteria2://password@host:443/?sni=host#Name</string>
+    <string name="import_placeholder_json">粘贴从 Bedlam 复制的配置</string>
+    <string name="import_field_name">名称（可选）</string>
+    <string name="import_action_paste">粘贴</string>
+    <string name="import_action_import">导入</string>
+    <string name="import_error_failed">导入配置文件失败</string>
+    <string name="import_link_failed">链接 %1$d：%2$s</string>
+    <string name="import_link_failed_unknown">无法导入链接 %1$d</string>
+    <string name="import_link_duplicate">链接 %1$d 已保存为\"%2$s\"</string>
+    <string name="import_links_none">未导入任何链接</string>
+    <string name="import_links_partial">已导入链接：%1$d / %2$d</string>
+    <plurals name="import_links_done">
+        <item quantity="other">已导入 %1$d 个配置文件</item>
+    </plurals>
+
+    <string name="settings_about_title">关于</string>
+    <string name="settings_about_subtitle">版本 %1$s · GitHub · 许可证 · README</string>
+    <string name="settings_about_version_app">应用 %1$s</string>
+    <string name="settings_about_version_hysteria">Hysteria %1$s</string>
+    <string name="settings_about_copy_versions">复制版本信息</string>
+    <string name="settings_about_copied">版本信息已复制</string>
+    <string name="settings_about_github_title">GitHub</string>
+    <string name="settings_about_github_subtitle">github.com/0xSVV/Bedlam</string>
+    <string name="settings_about_license_title">许可证</string>
+    <string name="settings_about_license_subtitle">GPL-3.0-or-later</string>
+    <string name="settings_apps_title">代理应用</string>
+    <string name="settings_apps_subtitle">选择哪些应用通过隧道路由</string>
+
+    <string name="settings_routing_title">路由</string>
+    <string name="settings_routing_subtitle">局域网绕过、IPv6、DNS、按 IP/ASN/域名的直连路由</string>
+
+    <string name="settings_quick_tile_title">快速设置磁贴</string>
+    <string name="settings_quick_tile_subtitle_disabled">点击添加系统下拉栏开关</string>
+    <string name="settings_quick_tile_subtitle_manual">打开快速设置编辑模式以添加 Bedlam</string>
+    <string name="settings_quick_tile_manual_hint">打开快速设置编辑模式并添加 Bedlam</string>
+
+    <string name="settings_updates_title">检查更新</string>
+    <string name="settings_updates_subtitle_idle">在 GitHub 上查找新版本</string>
+    <string name="settings_updates_subtitle_checking">检查中…</string>
+    <string name="settings_updates_subtitle_up_to_date">您已是最新版本</string>
+    <string name="settings_updates_subtitle_available">版本 %1$s 可用</string>
+    <string name="settings_updates_subtitle_failed">无法检查更新。点击重试</string>
+
+    <string name="settings_reliability_title">保持 VPN 活跃</string>
+    <string name="settings_reliability_subtitle_action">%1$s 需要可靠性检查</string>
+    <string name="settings_reliability_subtitle_ok">%1$s 状态良好</string>
+    <string name="settings_reliability_risk_low">状态良好</string>
+    <string name="settings_reliability_risk_medium">建议检查</string>
+    <string name="settings_reliability_risk_high">需要处理</string>
+    <string name="settings_reliability_hero_confirmed_title">可靠性检查清单已完成</string>
+    <string name="settings_reliability_hero_confirmed_body">Bedlam 将记住此设置，直到手机系统变更。如果 %1$s 在更新后重置电池设置，此页面将要求您重新检查</string>
+    <string name="settings_reliability_hero_high_title">此手机可能会停止 Bedlam</string>
+    <string name="settings_reliability_hero_high_body">%1$s 可以应用超出 Android 电池优化的额外电池规则。在依赖息屏隧道之前，请先检查清单</string>
+    <string name="settings_reliability_hero_medium_title">建议进行可靠性检查</string>
+    <string name="settings_reliability_hero_medium_body">%1$s 在某些固件版本上可能限制长时间运行的后台应用。这些设置可降低隧道被停止的风险</string>
+    <string name="settings_reliability_hero_low_title">此设备状态正常</string>
+    <string name="settings_reliability_hero_low_body">%1$s 不需要激进的厂商变通方案。您仍可以启用始终开启 VPN 以便重启后恢复</string>
+    <string name="settings_reliability_checklist_title">检查清单</string>
+    <string name="settings_reliability_checklist_body">这些是前台 VPN 服务的关键设置。部分可直接打开；厂商电池页面仍需手动操作</string>
+    <string name="settings_reliability_check_battery_title">Android 电池优化</string>
+    <string name="settings_reliability_check_battery_body">允许 Bedlam 在深度休眠期间保持网络访问和唤醒锁</string>
+    <string name="settings_reliability_check_vendor_title">厂商后台活动</string>
+    <string name="settings_reliability_check_vendor_body_risky">%1$s 有额外的应用电池策略，即使在 Android 电池优化已允许后也可能停止 VPN</string>
+    <string name="settings_reliability_check_vendor_body_normal">%1$s 通常不需要额外的厂商特定电池设置</string>
+    <string name="settings_reliability_check_restricted_title">Android 后台限制</string>
+    <string name="settings_reliability_check_restricted_body">当前待机级别：%1$s。受限应用即使服务可见也可能失去后台工作</string>
+    <string name="settings_reliability_check_notifications_title">VPN 通知</string>
+    <string name="settings_reliability_check_notifications_body">Android 要求 Bedlam 在隧道活跃时保持可见通知</string>
+    <string name="settings_reliability_check_always_on_title">始终开启 VPN</string>
+    <string name="settings_reliability_check_always_on_body">允许 Android 在启动或系统重启后重启 Bedlam。仅在希望隧道建立前阻止所有流量时启用锁定模式</string>
+    <string name="settings_reliability_status_unrestricted">无限制</string>
+    <string name="settings_reliability_status_needs_action">需要处理</string>
+    <string name="settings_reliability_status_not_needed">不需要</string>
+    <string name="settings_reliability_status_marked_done">已标记完成</string>
+    <string name="settings_reliability_status_review">检查</string>
+    <string name="settings_reliability_status_restricted">受限</string>
+    <string name="settings_reliability_status_allowed">已允许</string>
+    <string name="settings_reliability_status_blocked">已阻止</string>
+    <string name="settings_reliability_status_enabled">已启用</string>
+    <string name="settings_reliability_status_lockdown">锁定模式开启</string>
+    <string name="settings_reliability_status_off">关闭</string>
+    <string name="settings_reliability_status_other_vpn">其他 VPN</string>
+    <string name="settings_reliability_status_unknown">未知</string>
+    <string name="settings_reliability_bucket_active">活跃</string>
+    <string name="settings_reliability_bucket_working_set">工作集</string>
+    <string name="settings_reliability_bucket_frequent">频繁</string>
+    <string name="settings_reliability_bucket_rare">罕见</string>
+    <string name="settings_reliability_bucket_restricted">受限</string>
+    <string name="settings_reliability_bucket_exempted">豁免</string>
+    <string name="settings_reliability_bucket_unknown">未知</string>
+    <string name="settings_reliability_action_allow">允许电池优化例外</string>
+    <string name="settings_reliability_action_app_info">打开 Bedlam 应用信息</string>
+    <string name="settings_reliability_action_notifications">打开通知设置</string>
+    <string name="settings_reliability_action_vpn_settings">打开 VPN 设置</string>
+    <string name="settings_reliability_action_vendor_manager">打开电池/自启动管理器</string>
+    <string name="settings_reliability_action_mark_done">我已更改这些设置</string>
+    <string name="settings_reliability_action_marked_done">已标记完成</string>
+    <string name="settings_reliability_vendor_title">%1$s 步骤</string>
+    <string name="settings_reliability_vendor_body_oneplus">在 OxygenOS 上，从应用信息 -&gt; 电池用量开始，如果隧道仍停止，还需检查睡眠待机优化、深度优化和最近任务锁定</string>
+    <string name="settings_reliability_vendor_body_coloros">ColorOS 和 realme UI 通常将此分为后台活动、前台活动、自启动和最近任务锁定。请启用所有可见的选项</string>
+    <string name="settings_reliability_vendor_body_xiaomi">MIUI 和 HyperOS 通常需要同时设置无限制和自启动。某些版本还会停止未在最近任务中锁定的应用</string>
+    <string name="settings_reliability_vendor_body_huawei">EMUI 和 MagicOS 通常需要手动管理应用启动。请为 Bedlam 启用所有启动/后台开关</string>
+    <string name="settings_reliability_vendor_body_vivo">vivo 和 iQOO 固件通常将自启动与后台功耗分开。Bedlam 需要两者都允许</string>
+    <string name="settings_reliability_vendor_body_generic_aggressive">此厂商有时会添加额外的电池管理器。请查找 Bedlam 的后台活动、自启动、受保护应用或省电模式</string>
+    <string name="settings_reliability_vendor_body_samsung">三星对前台 VPN 通常没问题。仅在手机开始休眠 Bedlam 时使用这些步骤</string>
+    <string name="settings_reliability_vendor_body_normal">未检测到特殊厂商设置。保持 Android 电池优化已允许，如需自动重启请使用始终开启 VPN</string>
+    <string name="settings_reliability_explain_title">为什么 Bedlam 无法自动完成</string>
+    <string name="settings_reliability_explain_body">Android 允许 Bedlam 请求标准电池例外，但许多厂商添加了无公开 API 的私有电池管理器。Bedlam 可以打开相关设置并说明路径；只有您可以批准厂商特定的开关</string>
+
+    <string-array name="settings_reliability_steps_oneplus">
+        <item>打开 Bedlam 应用信息</item>
+        <item>点击电池用量或电池</item>
+        <item>选择无限制或允许后台活动</item>
+        <item>如果 Bedlam 仍停止，请禁用睡眠待机优化或深度优化</item>
+        <item>如果可见，请在最近任务中锁定 Bedlam，防止 OxygenOS 清除它</item>
+    </string-array>
+    <string-array name="settings_reliability_steps_coloros">
+        <item>打开 Bedlam 应用信息</item>
+        <item>打开电池用量或应用电池管理</item>
+        <item>允许后台活动和前台活动</item>
+        <item>如果手机显示自启动开关，请启用</item>
+        <item>如果 ColorOS 持续清除隧道，请在最近任务中锁定 Bedlam</item>
+    </string-array>
+    <string-array name="settings_reliability_steps_xiaomi">
+        <item>打开 Bedlam 应用信息</item>
+        <item>打开省电模式并选择无限制</item>
+        <item>打开自启动并启用 Bedlam</item>
+        <item>如果隧道仍停止，请在最近任务中锁定 Bedlam</item>
+    </string-array>
+    <string-array name="settings_reliability_steps_huawei">
+        <item>打开电池 -&gt; 应用启动</item>
+        <item>找到 Bedlam 并禁用自动管理</item>
+        <item>启用自启动、关联启动和后台运行</item>
+        <item>确认更改并重连隧道</item>
+    </string-array>
+    <string-array name="settings_reliability_steps_vivo">
+        <item>打开自启动并启用 Bedlam</item>
+        <item>打开电池或后台耗电</item>
+        <item>允许 Bedlam 在后台运行</item>
+        <item>更改设置后重连隧道</item>
+    </string-array>
+    <string-array name="settings_reliability_steps_generic_aggressive">
+        <item>打开 Bedlam 应用信息</item>
+        <item>将电池设置为无限制</item>
+        <item>如果可用，启用自启动或受保护应用</item>
+        <item>允许 Bedlam 后台活动</item>
+    </string-array>
+    <string-array name="settings_reliability_steps_samsung">
+        <item>打开 Bedlam 应用信息</item>
+        <item>如果 Bedlam 被停止，将电池设置为无限制</item>
+        <item>在后台使用限制中，如有需要，将 Bedlam 添加到永不休眠应用</item>
+    </string-array>
+    <string-array name="settings_reliability_steps_normal">
+        <item>允许 Android 电池优化例外</item>
+        <item>如需开机后自动重启，请启用始终开启 VPN</item>
+        <item>隧道活跃时保持 Bedlam 通知已允许</item>
+    </string-array>
+
+    <string name="action_back">返回</string>
+    <string name="action_save">保存</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_done">完成</string>
+
+    <string name="routing_title">路由</string>
+    <string name="routing_reconnect_hint">更改立即生效 — 隧道将短暂重连</string>
+
+    <string name="routing_bypass_lan_title">绕过局域网</string>
+    <string name="routing_bypass_lan_subtitle">RFC1918、链路本地和多播流量绕过隧道</string>
+
+    <string name="routing_ipv6_title">IPv6</string>
+    <string name="routing_ipv6_enabled">已启用</string>
+    <string name="routing_ipv6_disabled">已禁用</string>
+    <string name="routing_ipv6_bypass_only">仅绕过</string>
+
+    <string name="routing_mtu_label">MTU</string>
+    <string name="routing_mtu_auto_placeholder">自动（%1$d）</string>
+    <string name="routing_mtu_auto_suffix">自动</string>
+    <string name="routing_mtu_auto_hint" tools:ignore="PluralsCandidate">自动使用 %1$d 字节。IPv6 不允许更小值</string>
+    <string name="routing_mtu_hint">隧道接口接受的最大数据包</string>
+    <string name="routing_mtu_range_error" tools:ignore="PluralsCandidate">MTU 必须在 %1$d 到 %2$d 字节之间</string>
+    <string name="routing_dns_title">DNS</string>
+    <string name="routing_dns_system">系统</string>
+    <string name="routing_dns_cloudflare">Cloudflare</string>
+    <string name="routing_dns_google">Google</string>
+    <string name="routing_dns_custom">自定义</string>
+    <string name="routing_dns_system_warning">使用您网络的解析器，通过隧道查询 — 您的运营商或 ISP 解析器仍能看到所有查询</string>
+    <string name="routing_dns_custom_label">DNS 服务器</string>
+    <string name="routing_dns_custom_placeholder_ip">9.9.9.9, [2620:fe::fe]:53</string>
+    <string name="routing_dns_custom_placeholder_tls">dns.quad9.net, 9.9.9.9:853</string>
+    <string name="routing_dns_custom_placeholder_doq">dns.adguard-dns.com, quic://dns.nextdns.io</string>
+    <string name="routing_dns_custom_placeholder_https">https://dns.quad9.net/dns-query, 9.9.9.9</string>
+    <string name="routing_dns_custom_hint_ip">IPv4 或 IPv6，可选 :端口（默认 53）；按顺序尝试</string>
+    <string name="routing_dns_custom_hint_tls">主机名或 IP，可选 :端口（默认 853）；按顺序尝试</string>
+    <string name="routing_dns_custom_hint_doq">主机名或 IP，可选 quic:// 前缀和 :端口（默认 853）；按顺序尝试</string>
+    <string name="routing_dns_custom_hint_https">https:// URL，或可展开为 /dns-query 的主机名；端口需使用完整 URL。按顺序尝试</string>
+    <string name="routing_dns_custom_invalid">已忽略：%1$s</string>
+    <string name="routing_dns_custom_none_usable">没有可用于此传输协议的服务器 — 回退到 Cloudflare</string>
+    <string name="routing_dns_transport_title">传输协议</string>
+    <string name="routing_dns_transport_udp">UDP</string>
+    <string name="routing_dns_transport_tcp">TCP</string>
+    <string name="routing_dns_transport_tls">DNS over TLS</string>
+    <string name="routing_dns_transport_doq">DNS over QUIC</string>
+    <string name="routing_dns_transport_https">DNS over HTTPS</string>
+    <string name="routing_dns_transport_http3">DNS over HTTP/3</string>
+    <string name="routing_dns_transport_system_hint">系统解析器使用标准 DNS — 仅支持 UDP 或 TCP</string>
+    <string name="routing_direct_dns_title">直连 DNS</string>
+    <string name="routing_direct_dns_hint">用于服务器引导和显式绕过域名。其他捕获的 DNS 仍使用远程 DNS。</string>
+    <string name="routing_direct_dns_unavailable">引导和已启用的域名绕过规则使用此网络的系统 DNS（通过受保护 UDP）。其他直连 DNS 提供商和传输协议暂不可用。</string>
+    <string name="routing_dns_cache_title">缓存 DNS 响应</string>
+    <string name="routing_dns_cache_hint">启用后复用 Bedlam DNS 响应。不控制 Android、浏览器或解析器缓存。</string>
+
+    <string name="routing_sources_title">直连路由</string>
+    <string name="routing_sources_hint">绕过隧道的 CIDR、ASN 或域名。ASN 和域名每天重新解析。</string>
+    <string name="routing_sources_empty">暂无直连路由。添加 IP/ASN/域名或选择预设。</string>
+    <string name="routing_sources_add_cd">添加来源</string>
+    <string name="routing_sources_delete_cd">删除来源</string>
+    <string name="routing_sources_add_title">添加直连路由</string>
+    <string name="routing_sources_add_value_label">值</string>
+    <string name="routing_sources_add_comment_label">备注</string>
+    <string name="routing_refresh_cd">刷新所有来源</string>
+    <string name="routing_presets_chip">添加预设…</string>
+    <string name="routing_presets_title">精选预设</string>
+    <string name="routing_preset_asn_count">%1$d 个 ASN</string>
+    <string name="routing_preset_partial" tools:ignore="PluralsCandidate">%2$d 中已有 %1$d 个 — 点击添加其余</string>
+    <string name="routing_preset_added">已全部添加</string>
+    <string name="routing_sources_add_duplicate">已在列表中</string>
+    <string name="routing_swipe_disable">禁用</string>
+    <string name="routing_swipe_enable">启用</string>
+
+    <string name="routing_kind_cidr">CIDR</string>
+    <string name="routing_kind_asn">ASN</string>
+    <string name="routing_kind_domain">域名</string>
+
+    <string name="routing_source_resolving">解析中…</string>
+    <string name="routing_source_pending">等待首次解析</string>
+    <string name="routing_source_count">%1$d 个 CIDR</string>
+    <string name="routing_source_count_with_time">%1$d 个 CIDR · %2$s</string>
+    <string name="routing_source_error">解析失败：%1$s</string>
+
+    <string name="routing_source_details_expand_cd">显示详情</string>
+    <string name="routing_source_details_collapse_cd">隐藏详情</string>
+    <string name="routing_source_details_error_label">上次错误</string>
+    <string name="routing_source_details_networks_header">已解析网络</string>
+    <string name="routing_source_details_networks_breakdown">%1$d 个 IPv4 · %2$d 个 IPv6</string>
+    <string name="routing_source_details_no_networks">尚未解析任何网络。</string>
+    <string name="routing_source_details_more_networks" tools:ignore="PluralsCandidate">还有 %1$d 个网络</string>
+    <string name="routing_source_details_more_networks_one">还有 1 个网络</string>
+
+    <string name="routing_source_kind_cidr">CIDR</string>
+    <string name="routing_source_kind_asn">ASN</string>
+    <string name="routing_source_kind_domain">域名</string>
+    <string name="routing_source_updated_just_now">刚刚</string>
+    <plurals name="routing_source_updated_minutes">
+        <item quantity="other">%1$d 分钟前</item>
+    </plurals>
+    <plurals name="routing_source_updated_hours">
+        <item quantity="other">%1$d 小时前</item>
+    </plurals>
+    <plurals name="routing_source_updated_days">
+        <item quantity="other">%1$d 天前</item>
+    </plurals>
+    <string name="routing_source_state_disabled">已禁用</string>
+
+    <string name="app_selection_title">代理应用</string>
+    <string name="app_selection_search_hint">搜索应用</string>
+    <string name="app_selection_all_hint">所有应用将通过隧道路由。</string>
+    <string name="app_selection_search_cd">搜索</string>
+    <string name="app_selection_clear_search_cd">清除搜索</string>
+
+    <string name="app_filter_mode_all">全部</string>
+    <string name="app_filter_mode_allowlist">已选择</string>
+    <string name="app_filter_mode_blocklist">除已选择外全部</string>
+
+    <string name="dashboard_open_session_cd">打开会话详情</string>
+
+    <string name="dashboard_ping_all_cd">测量所有配置文件的延迟</string>
+    <string name="dashboard_latency_measuring">…</string>
+    <string name="dashboard_latency_measuring_cd">正在测量延迟</string>
+    <string name="dashboard_latency_ms">%1$d ms</string>
+    <string name="dashboard_latency_unreachable">—</string>
+    <string name="dashboard_latency_unreachable_cd">无法访问</string>
+
+    <string name="session_title">会话</string>
+    <string name="session_action_refresh_cd">刷新</string>
+    <string name="session_action_retry">重试</string>
+    <string name="session_speed_test_error">速度测试无法加载。请确认隧道已连接，然后重试。</string>
+    <string name="session_error_title">无法加载会话</string>
+    <string name="session_error_unknown">会话查询失败。请检查隧道并重试。</string>
+    <string name="session_disconnected_title">无隧道</string>
+    <string name="session_disconnected_body">请先连接。这些地址通过隧道查询，隧道断开时无法报告。</string>
+    <string name="session_stale_explainer">上次通过隧道读取。隧道正在重连，数据可能已过时。</string>
+    <string name="session_ip_explainer">由公共查询服务通过活跃隧道报告。仅当此路由支持 IPv6 时才会显示。</string>
+    <string name="session_value_unavailable">不可用</string>
+    <string name="session_value_unknown">未知</string>
+
+    <string name="session_field_ipv4">IPv4</string>
+    <string name="session_field_ipv6">IPv6</string>
+    <string name="session_field_asn">ASN</string>
+    <string name="session_field_as_org">AS 组织</string>
+    <string name="session_field_country">国家</string>
+    <string name="session_field_city">城市</string>
+    <string name="session_field_region">地区</string>
+    <string name="session_field_latitude">纬度</string>
+    <string name="session_field_longitude">经度</string>
+
+    <string name="session_speed_test_title">速度测试</string>
+    <string name="session_speed_test_subtitle">测试您的网络连接。</string>
+
+    <string name="logs_action_menu_open_cd">打开日志操作</string>
+    <string name="logs_action_menu_close_cd">关闭日志操作</string>
+    <string name="logs_action_pause_cd">暂停日志</string>
+    <string name="logs_action_resume_cd">恢复日志</string>
+    <string name="logs_dropped_notice" tools:ignore="PluralsCandidate">已丢弃 %1$d 行较早日志</string>
+    <string name="logs_dropped_notice_one">已丢弃 1 行较早日志</string>
+    <string name="logs_action_share_cd">分享日志</string>
+    <string name="logs_share_message">隐藏地址会将公共 IP 地址、服务器主机名和自定义 DNS 服务器替换为编号占位符。端口、本地地址和站点名称保留。</string>
+    <string name="logs_share_hide_addresses">隐藏地址</string>
+    <string name="logs_share_as_is">原样分享</string>
+    <string name="logs_action_clear_cd">删除日志</string>
+    <string name="logs_empty_idle">等待日志输出…</string>
+    <string name="logs_empty_paused">已暂停。新条目被抑制。</string>
+    <string name="logs_empty_filtered">%1$s 过滤器隐藏了所有行</string>
+    <string name="logs_level_debug">DEBUG</string>
+    <string name="logs_level_info">INFO</string>
+    <string name="logs_level_warn">WARN</string>
+    <string name="logs_level_error">ERROR</string>
+
+    <string name="profile_config_title">配置</string>
+    <string name="profile_config_open_cd">打开配置文件</string>
+    <string name="profile_config_action_edit">编辑</string>
+    <string name="profile_config_action_copy">复制 Bedlam 配置</string>
+    <string name="profile_config_action_copy_menu">复制</string>
+    <string name="profile_config_action_copy_link">复制链接</string>
+    <string name="profile_config_action_share_link">分享链接</string>
+    <string name="profile_config_link_clip_label">hysteria2:// 链接</string>
+    <string name="profile_config_link_copy_success">链接已复制</string>
+    <string name="profile_config_link_unavailable">Realm 配置文件无法以链接形式分享</string>
+    <string name="profile_config_link_warning_title">分享链接前请注意</string>
+    <string name="profile_config_link_warning_intro">链接不包含：</string>
+    <string name="profile_config_link_warning_insecure_pin">Hiddify 和 NekoBox 会忽略证书固定，在这些应用中此配置文件不会验证服务器证书。</string>
+    <string name="profile_config_link_gap_ca">自定义 CA 证书</string>
+    <string name="profile_config_link_gap_client_certificate">客户端证书和密钥</string>
+    <string name="profile_config_link_gap_quic">QUIC 设置</string>
+    <string name="profile_config_link_gap_congestion">拥塞控制</string>
+    <string name="profile_config_link_gap_bandwidth">带宽限制</string>
+    <string name="profile_config_link_gap_hop_interval">端口跳转间隔</string>
+    <string name="profile_config_link_gap_packet_size">Gecko 数据包大小</string>
+    <string name="profile_config_action_delete">删除配置文件</string>
+    <string name="profile_config_clip_label">Bedlam 配置文件</string>
+    <string name="profile_config_copy_success">Bedlam 配置已复制</string>
+    <string name="profile_config_not_found">未找到配置文件</string>
+    <string name="profile_config_save_error">保存失败：%1$s</string>
+    <string name="profile_config_field_empty">未指定</string>
+    <string name="profile_config_hint_prefix">注意：</string>
+    <string name="profile_config_delete_title">删除配置文件？</string>
+    <string name="profile_config_delete_message">这将删除配置文件及其配置。此操作无法撤销。</string>
+    <string name="profile_config_delete_confirm">删除</string>
+    <string name="profile_config_docs_link">Hysteria 完整客户端配置</string>
+
+    <string name="profile_config_section_profile">配置文件</string>
+    <string name="profile_config_section_server">服务器</string>
+    <string name="profile_config_section_tls">TLS</string>
+    <string name="profile_config_section_obfuscation">混淆</string>
+    <string name="profile_config_section_quic">QUIC</string>
+    <string name="profile_config_section_congestion">拥塞控制</string>
+    <string name="profile_config_section_bandwidth">带宽</string>
+    <string name="profile_config_section_transport">传输（端口跳转）</string>
+    <string name="profile_config_section_behavior">行为</string>
+    <string name="profile_config_section_realm">Realm（会合）</string>
+
+    <string name="profile_config_caution_auth">认证凭据 — 请谨慎分享</string>
+    <string name="profile_config_caution_tls_insecure">禁用证书验证。易受中间人攻击</string>
+    <string name="profile_config_caution_tls_pin">固定哈希覆盖正常证书验证。</string>
+    <string name="profile_config_caution_tls_ca">自定义 CA 替换此配置文件的系统信任存储</string>
+    <string name="profile_config_caution_tls_client">mTLS 材料必须与服务器期望匹配</string>
+    <string name="profile_config_caution_tls_ech">Base64 配置列表或 ECH CONFIGS PEM 块。过期值会导致连接失败，直到更新</string>
+    <string name="profile_config_caution_obfs">类型（plain、salamander、gecko）和密码必须与服务器匹配</string>
+    <string name="profile_config_caution_realm">仅当服务器地址为 realm:// URI 时使用</string>
+    <string name="profile_config_caution_quic">调整这些参数可能导致连接中断</string>
+    <string name="profile_config_value_unset">未设置</string>
+    <string name="profile_config_value_default_seconds">默认 %1$d 秒</string>
+    <string name="profile_config_hint_quic_idle" tools:ignore="PluralsCandidate">0 使用默认值 %1$d 秒。隧道使用此值和服务器值中较小的一个</string>
+    <string name="profile_config_hint_quic_keepalive" tools:ignore="PluralsCandidate">0 使用默认值 %1$d 秒</string>
+    <string name="profile_config_caution_congestion">不支持的算法或 BBR 配置可能被拒绝</string>
+    <string name="profile_config_caution_bandwidth">错误报告会导致拥塞控制问题</string>
+    <string name="profile_config_caution_hop">跳转间隔必须与服务器一致</string>
+    <string name="profile_config_action_reveal">显示</string>
+    <string name="profile_config_action_hide">隐藏</string>
+
+    <string name="update_title">有可用更新</string>
+    <string name="update_whats_new">更新内容</string>
+    <string name="update_notes_empty">此版本无发布说明。</string>
+    <string name="update_action_install">下载并安装</string>
+    <string name="update_action_skip">暂不</string>
+    <string name="update_last_reminder">如果点击暂不，Bedlam 将不再提示此版本。您仍可在设置中的检查更新中安装。</string>
+    <string name="update_action_retry">重试</string>
+    <string name="update_downloading">正在下载 %1$s / %2$s…</string>
+    <string name="update_installing">安装中…</string>
+    <string name="update_failed">更新失败：%1$s</string>
+    <string name="update_error_signature">此下载未使用与您已安装应用相同的密钥签名。请从 GitHub Releases 页面获取更新。</string>
+    <string name="update_error_install_permission">Android 阻止 Bedlam 安装应用。请在设置中允许，然后重试。</string>
+    <string name="update_action_allow_installs">打开设置</string>
+
+    <string name="profile_config_discard_title">放弃更改？</string>
+    <string name="profile_config_discard_message">您对此配置文件的未保存编辑将丢失。</string>
+    <string name="profile_config_discard_confirm">放弃</string>
+    <string name="profile_config_discard_keep">继续编辑</string>
+
+    <string name="profile_config_reconnect_hint">已保存。重连以使用新设置。</string>
+</resources>
