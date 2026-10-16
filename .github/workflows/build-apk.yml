@@ -33,15 +33,15 @@ jobs:
       - name: Build the Go library from source
         run: ./gradlew :hysteria:buildGolib --stacktrace
 
-      - name: Build unsigned release APKs
-        run: ./gradlew :app:assembleRelease --stacktrace
+      - name: Build debug APKs (signed with debug key)
+        run: ./gradlew :app:assembleDebug --stacktrace
 
       - name: List APKs
-        run: ls -lh app/build/outputs/apk/release/
+        run: ls -lh app/build/outputs/apk/debug/
 
       - name: Upload APKs
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: bedlam-apk
-          path: app/build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/debug/*.apk
           retention-days: 30
